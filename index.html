@@ -11,20 +11,18 @@
 .league-leader{margin-top:18px;background:#0d2342;border:1px solid #4476ae;border-radius:13px;padding:14px 16px;font-size:16px;font-weight:800;color:#ffffff;line-height:1.7}.hero{padding:20px}
 #performanceSection{display:none!important}
 
-/* Podium styling: only players with points get medals. */
-#ranking table{border-collapse:separate;border-spacing:0 5px}
-#ranking .podium-row td{border-top:1px solid transparent;border-bottom:1px solid transparent;padding-top:14px;padding-bottom:14px}
-#ranking .podium-row td:first-child{border-right:3px solid;border-radius:0 12px 12px 0}
-#ranking .podium-row td:last-child{border-left:1px solid;border-radius:12px 0 0 12px}
-#ranking .podium-1 td{background:#40351e;border-color:#8f783f;color:#fff7dd}
-#ranking .podium-2 td{background:#29384d;border-color:#71879e;color:#f0f5fc}
-#ranking .podium-3 td{background:#3c2c2b;border-color:#91634b;color:#ffede0}
-#ranking .podium-row .rank{font-size:23px;line-height:1}
-#ranking .podium-row .player-name{font-weight:850;font-size:14px}
-#ranking .ranking-points b{font-size:18px;font-weight:900}
-#ranking .podium-1 .ranking-points b{color:#ffe19a}
-#ranking .podium-2 .ranking-points b{color:#e5eefb}
-#ranking .podium-3 .ranking-points b{color:#f4c4a3}
+/* Clean, compact blue-and-white league podium. */
+#ranking table{border-collapse:separate;border-spacing:0 3px}
+#ranking td{padding-top:10px;padding-bottom:10px}
+#ranking .podium-row td{background:#142c4c;color:#f6f9ff;border-top:1px solid #294b77;border-bottom:1px solid #294b77;padding-top:11px;padding-bottom:11px}
+#ranking .podium-row td:first-child{border-right:1px solid #294b77;border-radius:0 10px 10px 0}
+#ranking .podium-row td:last-child{border-left:1px solid #294b77;border-radius:10px 0 0 10px}
+#ranking .podium-1 td{background:#192f4b;border-top-color:#b99b55;border-bottom-color:#b99b55}
+#ranking .podium-1 td:first-child{border-right:2px solid #b99b55}
+#ranking .podium-1 td:last-child{border-left:2px solid #b99b55}
+#ranking .podium-row .rank{font-size:20px;line-height:1}
+#ranking .podium-row .player-name{font-weight:800;font-size:14px}
+#ranking .ranking-points b{font-size:20px;font-weight:900;color:#ffffff}
 </style></head><body><main><div class="top"><div class="brand">🎾 PADEL <span class="green">LEAGUE</span><div class="muted">ליגת המפקחים · עונה 1</div></div><span class="badge" id="connection">מתחבר...</span></div><section class="hero"><span class="badge">🏆 הליגה שלנו</span><h1>ליגת המפקחים</h1><p class="muted">הזוגות מתחלפים. הנקודות נשארות אישיות.</p><div class="league-leader" id="leagueLeader" aria-live="polite">🏆 בראש הטבלה: טוען...</div></section><div id="message" class="notice">טוען נתונים משותפים...</div>
 <nav class="quick-actions" aria-label="פעולות מהירות"><button type="button" onclick="openLeagueForm('eventForm')">📅 הוסף משחק</button><button type="button" onclick="openLeagueForm('matchForm')">🏆 הזן תוצאה</button><button type="button" onclick="openLeagueForm('playerForm')">👤 הוסף שחקן</button></nav>
 <section class="card" id="rankingSection"><h2>🏆 טבלת הליגה</h2><p class="hint">כל משחקון שווה נקודה אישית לכל שחקן בזוג, גם בהפסד, והנקודות נצברות לאורך הליגה.</p><div id="ranking"></div><details><summary>הוסף שחקן חדש</summary><form id="playerForm"><label>שם מלא</label><input id="playerName" required maxlength="100"><label>סוג שחקן</label><select id="playerType"><option value="guest">זמני — ללא ניקוד</option><option value="regular">קבוע — נכנס לדירוג</option></select><div class="actions"><button class="primary">הוסף שחקן</button></div></form></details></section>
